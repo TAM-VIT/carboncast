@@ -9,6 +9,11 @@ cd ~/Desktop/PROJECTS/carboncast && ./start.sh
 Opens `http://localhost:8000`. One process, fully offline. **No venue WiFi needed.**
 Stop with Ctrl+C.
 
+**Light or dark:** the toggle is top-right of the nav and it remembers your choice.
+Default is light, because a dark screen washes out under bright hall lighting. If the
+venue turns out dim, switch it. You can also bookmark either mode directly:
+`localhost:8000/?theme=dark` or `localhost:8000/?theme=light`.
+
 If something is broken, full rebuild from scratch:
 ```bash
 cd ~/Desktop/PROJECTS/carboncast/frontend && npm install && npm run build
@@ -22,6 +27,7 @@ cd .. && ./start.sh
 - [ ] Click each of M20 / M25 / M30 / M40
 - [ ] Set laptop to never sleep. Disable notifications. Close Slack/WhatsApp.
 - [ ] Browser at 80–90% zoom so a whole section fits the screen
+- [ ] Look at the actual booth lighting and pick light or dark before judging starts
 - [ ] Charge the laptop. Bring the charger.
 
 ## The 90-second demo

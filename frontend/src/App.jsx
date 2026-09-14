@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react'
 
 const MIXC = {
-  cement:'#2540d9', slag:'#5c6bb8', fly_ash:'#949cc4', water:'#6f8ba3',
-  superplasticizer:'#c0392b', coarse_agg:'#474c54', fine_agg:'#848a93'
+  cement:'var(--c-cement)', slag:'var(--c-slag)', fly_ash:'var(--c-flyash)',
+  water:'var(--c-water)', superplasticizer:'var(--c-sp)',
+  coarse_agg:'var(--c-coarse)', fine_agg:'var(--c-fine)'
 }
 const api = (p, body) => fetch(p, body
   ? { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) }
@@ -68,7 +69,7 @@ function StrengthGauge({ s, target }) {
       <div className="band-scale"><span>0</span><span>20</span><span>40</span><span>60</span><span>80 MPa</span></div>
       <div className="legend">
         <span><i style={{background:'var(--ink)'}} />median {n1(s.mid ?? s.mean)}</span>
-        <span><i style={{background:'rgba(37,64,217,.3)',border:'1px solid var(--blue)'}} />band {n1(s.lo)}–{n1(s.hi)}</span>
+        <span><i style={{background:'var(--blue)',opacity:.35,border:'1px solid var(--blue)'}} />band {n1(s.lo)}–{n1(s.hi)}</span>
         {target != null && <span><i style={{background:'var(--stamp)'}} />target {target}</span>}
       </div>
     </div>
@@ -123,22 +124,22 @@ function Pareto({ data }) {
       <svg viewBox={`0 0 ${W} ${H}`} style={{width:'100%',minWidth:540,display:'block'}}>
         {[0,.25,.5,.75,1].map(t=>{const v=y0+(y1-y0)*t;return(
           <g key={t}>
-            <line x1={P.l} x2={W-P.r} y1={Y(v)} y2={Y(v)} stroke="#c5c9cf" strokeWidth="1" />
-            <text x={P.l-9} y={Y(v)+4} textAnchor="end" fontFamily="Space Mono, monospace" fontSize="10" fill="#848a93">{Math.round(v)}</text>
+            <line x1={P.l} x2={W-P.r} y1={Y(v)} y2={Y(v)} stroke="var(--rule)" strokeWidth="1" />
+            <text x={P.l-9} y={Y(v)+4} textAnchor="end" fontFamily="Space Mono, monospace" fontSize="10" fill="var(--ink-faint)">{Math.round(v)}</text>
           </g>)})}
         {[0,20,40,60,80].filter(v=>v<=x1).map(v=>(
-          <text key={v} x={X(v)} y={H-P.b+18} textAnchor="middle" fontFamily="Space Mono, monospace" fontSize="10" fill="#848a93">{v}</text>))}
-        <line x1={P.l} x2={W-P.r} y1={H-P.b} y2={H-P.b} stroke="#191b1f" strokeWidth="1.5" />
-        <line x1={P.l} x2={P.l} y1={P.t} y2={H-P.b} stroke="#191b1f" strokeWidth="1.5" />
-        {data.cloud.map((d,i)=><circle key={i} cx={X(d.strength)} cy={Y(d.co2)} r="2.6" fill="#191b1f" opacity=".24" />)}
-        <path d={path} fill="none" stroke="#2540d9" strokeWidth="2" />
-        {fr.map((d,i)=><circle key={i} cx={X(d.strength_lo)} cy={Y(d.co2)} r="4.5" fill="#f5f6f8" stroke="#2540d9" strokeWidth="2" />)}
-        <text x={W-P.r} y={H-6} textAnchor="end" fontFamily="Space Mono, monospace" fontSize="10" fill="#848a93">STRENGTH (MPa) →</text>
-        <text x={P.l-10} y={16} textAnchor="end" fontFamily="Space Mono, monospace" fontSize="10" fill="#848a93">kg CO₂e/m³</text>
+          <text key={v} x={X(v)} y={H-P.b+18} textAnchor="middle" fontFamily="Space Mono, monospace" fontSize="10" fill="var(--ink-faint)">{v}</text>))}
+        <line x1={P.l} x2={W-P.r} y1={H-P.b} y2={H-P.b} stroke="var(--ink)" strokeWidth="1.5" />
+        <line x1={P.l} x2={P.l} y1={P.t} y2={H-P.b} stroke="var(--ink)" strokeWidth="1.5" />
+        {data.cloud.map((d,i)=><circle key={i} cx={X(d.strength)} cy={Y(d.co2)} r="2.6" fill="var(--ink)" opacity=".26" />)}
+        <path d={path} fill="none" stroke="var(--blue)" strokeWidth="2" />
+        {fr.map((d,i)=><circle key={i} cx={X(d.strength_lo)} cy={Y(d.co2)} r="4.5" fill="var(--paper-2)" stroke="var(--blue)" strokeWidth="2" />)}
+        <text x={W-P.r} y={H-6} textAnchor="end" fontFamily="Space Mono, monospace" fontSize="10" fill="var(--ink-faint)">STRENGTH (MPa) →</text>
+        <text x={P.l-10} y={16} textAnchor="end" fontFamily="Space Mono, monospace" fontSize="10" fill="var(--ink-faint)">kg CO₂e/m³</text>
       </svg>
       <div className="legend">
-        <span><i style={{background:'#191b1f',opacity:.28}} />{data.cloud.length} real lab mixes (28-day)</span>
-        <span><i style={{background:'#2540d9'}} />CarbonCast frontier</span>
+        <span><i style={{background:'var(--ink)',opacity:.28}} />{data.cloud.length} real lab mixes (28-day)</span>
+        <span><i style={{background:'var(--blue)'}} />CarbonCast frontier</span>
       </div>
     </div>
   )
@@ -156,6 +157,16 @@ export default function App() {
   const [impact,setImpact] = useState(null)
   const [vol,setVol] = useState(null)
   const timer = useRef(null)
+  const [dark,setDark] = useState(() => {
+    // ?theme=dark / ?theme=light wins, so either mode can be bookmarked for the booth
+    const q = new URLSearchParams(location.search).get('theme')
+    if (q === 'dark' || q === 'light') return q === 'dark'
+    try { return localStorage.getItem('cc-theme') === 'dark' } catch { return false }
+  })
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
+    try { localStorage.setItem('cc-theme', dark ? 'dark' : 'light') } catch {}
+  }, [dark])
 
   useEffect(() => { api('/api/meta').then(m => { setMeta(m); setMix({...m.defaults, age:28}); setVol(m.vit_block.volume_m3) })
     api('/api/pareto').then(setPareto) }, [])
@@ -192,7 +203,11 @@ export default function App() {
           <a href="#lab">The Lab</a><a href="#optimise">Optimise</a>
           <a href="#evidence">Evidence</a><a href="#campus">Campus</a><a href="#model">Model</a>
         </div>
-        <div className="pill live"><span className="dot" />Live model</div>
+        <div style={{display:'flex',alignItems:'center',gap:10}}>
+          <button className="tt" onClick={()=>setDark(d=>!d)}
+            title="Toggle dark mode">{dark ? '☀ Light' : '◗ Dark'}</button>
+          <div className="pill live"><span className="dot" />Live model</div>
+        </div>
       </div></nav>
 
       {/* HERO */}
@@ -293,14 +308,14 @@ export default function App() {
               <div className="card-head"><span>Typical site mix</span><span>{grade}</span></div>
               <StrengthGauge s={opt.baseline.strength} target={target} />
               <div className="gauge-label"><span>Carbon</span><span>{n0(opt.baseline.co2)} kg/m³</span></div>
-              <div className="cmp-bar"><i style={{width:'100%',background:'#c0392b'}} /></div>
+              <div className="cmp-bar"><i style={{width:'100%',background:'var(--stamp)'}} /></div>
               <Stats st={opt.baseline.stats} co2={opt.baseline.co2} cost={opt.baseline.cost} />
             </div>
             <div className="card">
               <div className="card-head"><span className="accent">CarbonCast mix</span><span>{grade}</span></div>
               <StrengthGauge s={opt.strength} target={target} />
               <div className="gauge-label"><span>Carbon</span><span>{n0(opt.co2)} kg/m³</span></div>
-              <div className="cmp-bar"><i style={{width:(100*opt.co2/opt.baseline.co2)+'%',background:'#15795c'}} /></div>
+              <div className="cmp-bar"><i style={{width:(100*opt.co2/opt.baseline.co2)+'%',background:'var(--green)'}} /></div>
               <Stats st={opt.stats} co2={opt.co2} cost={opt.cost} novelty={opt.novelty} />
             </div>
           </div>

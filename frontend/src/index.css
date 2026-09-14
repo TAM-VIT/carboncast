@@ -12,6 +12,22 @@
   --font-body:'Fraunces',Georgia,serif;
   --font-mono:'Space Mono',ui-monospace,Menlo,monospace;
   --maxw:1180px;
+  --c-cement:#2540d9; --c-slag:#5c6bb8; --c-flyash:#949cc4; --c-water:#6f8ba3;
+  --c-sp:#c0392b; --c-coarse:#474c54; --c-fine:#848a93;
+}
+
+/* ============ dark mode: gunmetal ============
+   Default stays light - exhibition halls are bright and a dark screen washes out.
+   Toggle is explicit rather than prefers-color-scheme so the booth controls it. */
+html[data-theme="dark"]{
+  --paper:#1b1e23; --paper-2:#24282e; --paper-3:#0e1115;
+  --ink:#e7e9ed; --ink-soft:#a9afb9; --ink-faint:#7c838e; --rule:#363b44;
+  --blue:#6a89ff; --blue-deep:#94aaff; --stamp:#e2603f; --green:#3ec78e;
+  --steel:linear-gradient(180deg,#2b3036 0%,#23272d 46%,#1d2127 100%);
+  --steel-hi:inset 0 1px 0 rgba(255,255,255,.07);
+  --c-cement:#6a89ff; --c-slag:#7d8ad6; --c-flyash:#a6adda; --c-water:#7fa3bd;
+  --c-sp:#e2603f; --c-coarse:#8a919c; --c-fine:#5f666f;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -193,3 +209,37 @@ input[type=range]::-webkit-slider-runnable-track{background:linear-gradient(180d
 input[type=range]::-webkit-slider-thumb{background:linear-gradient(180deg,#3a3e46,#191b1f);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.22)}
 input[type=range]:hover::-webkit-slider-thumb{background:linear-gradient(180deg,#3f57e2,#1e35b8)}
+
+
+/* ---- dark-mode surface corrections ---- */
+html[data-theme="dark"] body{
+  background-color:#1b1e23;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+}
+html[data-theme="dark"] .nav{background:linear-gradient(180deg,#272c33,#1e2228)}
+html[data-theme="dark"] .band{background:linear-gradient(180deg,#1e2228,#171a1f)}
+html[data-theme="dark"] .band-fill{background:rgba(106,137,255,.22)}
+html[data-theme="dark"] .cmp-bar{background:linear-gradient(180deg,#1e2228,#171a1f)}
+html[data-theme="dark"] .statgrid{background:linear-gradient(180deg,rgba(255,255,255,.035),transparent)}
+html[data-theme="dark"] .verdict{background:linear-gradient(180deg,rgba(106,137,255,.16),rgba(106,137,255,.06))}
+html[data-theme="dark"] .pill{background:rgba(255,255,255,.05)}
+html[data-theme="dark"] .btn:hover{background:var(--ink);color:var(--paper)}
+html[data-theme="dark"] .btn-primary{background:linear-gradient(180deg,#e9ebef,#cdd2da);color:#15181c;
+  border-color:#e9ebef;box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+html[data-theme="dark"] .btn-primary:hover{background:linear-gradient(180deg,#8aa2ff,#5b7cff);
+  border-color:var(--blue);color:#12151a}
+html[data-theme="dark"] .btn.is-on{background:linear-gradient(180deg,#7d99ff,#4f72f0);
+  border-color:var(--blue);color:#12151a}
+html[data-theme="dark"] input[type=range]::-webkit-slider-runnable-track{background:linear-gradient(180deg,#3b414a,#2c3138)}
+html[data-theme="dark"] input[type=range]::-webkit-slider-thumb{background:linear-gradient(180deg,#d8dce2,#aeb5bf)}
+html[data-theme="dark"] input[type=range]:hover::-webkit-slider-thumb{background:linear-gradient(180deg,#8aa2ff,#5b7cff)}
+html{transition:none}
+body,.card,.nav,.band,.btn{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+
+/* theme toggle */
+.tt{font-family:var(--font-mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.12em;
+  padding:5px 10px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;
+  transition:background .15s ease,color .15s ease}
+.tt:hover{background:var(--ink);color:var(--paper)}
