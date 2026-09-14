@@ -1,0 +1,486 @@
+{
+ "grades": {
+  "M20": {
+   "mix": {
+    "cement": 143.9,
+    "slag": 119.1,
+    "fly_ash": 82.8,
+    "water": 163.4,
+    "superplasticizer": 0.0,
+    "coarse_agg": 1022.2,
+    "fine_agg": 791.8
+   },
+   "strength": {
+    "lo": 20.17,
+    "mid": 30.96,
+    "hi": 40.4,
+    "mean": 28.33
+   },
+   "co2": 150.3,
+   "co2_parts": {
+    "cement": 131.237,
+    "slag": 9.409,
+    "fly_ash": 0.662,
+    "water": 0.056,
+    "superplasticizer": 0.0,
+    "coarse_agg": 4.907,
+    "fine_agg": 4.038
+   },
+   "cost": 3732.0,
+   "cost_parts": {
+    "cement": 1151.2,
+    "slag": 476.4,
+    "fly_ash": 124.2,
+    "water": 8.17,
+    "superplasticizer": 0.0,
+    "coarse_agg": 1022.2,
+    "fine_agg": 950.16
+   },
+   "stats": {
+    "binder": 345.8,
+    "total_mass": 2323.2,
+    "w_b_ratio": 0.473,
+    "scm_fraction": 0.584
+   },
+   "novelty": {
+    "distance": 1.371,
+    "ratio": 1.66,
+    "status": "supported"
+   },
+   "feasible": true,
+   "target": 20.0,
+   "age": 28,
+   "baseline": {
+    "mix": {
+     "cement": 320,
+     "slag": 0,
+     "fly_ash": 0,
+     "water": 186,
+     "superplasticizer": 0.0,
+     "coarse_agg": 1210,
+     "fine_agg": 650
+    },
+    "strength": {
+     "lo": 28.8,
+     "mid": 35.89,
+     "hi": 50.5,
+     "mean": 34.98
+    },
+    "co2": 301.0,
+    "co2_parts": {
+     "cement": 291.84,
+     "slag": 0.0,
+     "fly_ash": 0.0,
+     "water": 0.064,
+     "superplasticizer": 0.0,
+     "coarse_agg": 5.808,
+     "fine_agg": 3.315
+    },
+    "cost": 4559.0,
+    "cost_parts": {
+     "cement": 2560.0,
+     "slag": 0.0,
+     "fly_ash": 0.0,
+     "water": 9.3,
+     "superplasticizer": 0.0,
+     "coarse_agg": 1210.0,
+     "fine_agg": 780.0
+    },
+    "stats": {
+     "binder": 320,
+     "total_mass": 2366.0,
+     "w_b_ratio": 0.581,
+     "scm_fraction": 0.0
+    },
+    "novelty": {
+     "distance": 2.007,
+     "ratio": 2.43,
+     "status": "supported"
+    },
+    "age": 28
+   },
+   "savings": {
+    "co2_abs": 150.7,
+    "co2_pct": 50.1,
+    "cost_abs": 827.0,
+    "cement_abs": 176.1
+   }
+  },
+  "M25": {
+   "mix": {
+    "cement": 144.1,
+    "slag": 188.3,
+    "fly_ash": 79.9,
+    "water": 173.0,
+    "superplasticizer": 0.1,
+    "coarse_agg": 939.3,
+    "fine_agg": 779.9
+   },
+   "strength": {
+    "lo": 25.29,
+    "mid": 35.56,
+    "hi": 36.85,
+    "mean": 29.37
+   },
+   "co2": 155.7,
+   "co2_parts": {
+    "cement": 131.419,
+    "slag": 14.876,
+    "fly_ash": 0.639,
+    "water": 0.06,
+    "superplasticizer": 0.188,
+    "coarse_agg": 4.509,
+    "fine_agg": 3.977
+   },
+   "cost": 3919.0,
+   "cost_parts": {
+    "cement": 1152.8,
+    "slag": 753.2,
+    "fly_ash": 119.85,
+    "water": 8.65,
+    "superplasticizer": 9.0,
+    "coarse_agg": 939.3,
+    "fine_agg": 935.88
+   },
+   "stats": {
+    "binder": 412.3,
+    "total_mass": 2304.6,
+    "w_b_ratio": 0.42,
+    "scm_fraction": 0.65
+   },
+   "novelty": {
+    "distance": 1.487,
+    "ratio": 1.8,
+    "status": "supported"
+   },
+   "feasible": true,
+   "target": 25.0,
+   "age": 28,
+   "baseline": {
+    "mix": {
+     "cement": 340,
+     "slag": 0,
+     "fly_ash": 0,
+     "water": 180,
+     "superplasticizer": 0.0,
+     "coarse_agg": 1195,
+     "fine_agg": 660
+    },
+    "strength": {
+     "lo": 31.48,
+     "mid": 42.29,
+     "hi": 55.4,
+     "mean": 44.88
+    },
+    "co2": 319.2,
+    "co2_parts": {
+     "cement": 310.08,
+     "slag": 0.0,
+     "fly_ash": 0.0,
+     "water": 0.062,
+     "superplasticizer": 0.0,
+     "coarse_agg": 5.736,
+     "fine_agg": 3.366
+    },
+    "cost": 4716.0,
+    "cost_parts": {
+     "cement": 2720.0,
+     "slag": 0.0,
+     "fly_ash": 0.0,
+     "water": 9.0,
+     "superplasticizer": 0.0,
+     "coarse_agg": 1195.0,
+     "fine_agg": 792.0
+    },
+    "stats": {
+     "binder": 340,
+     "total_mass": 2375.0,
+     "w_b_ratio": 0.529,
+     "scm_fraction": 0.0
+    },
+    "novelty": {
+     "distance": 1.829,
+     "ratio": 2.21,
+     "status": "supported"
+    },
+    "age": 28
+   },
+   "savings": {
+    "co2_abs": 163.5,
+    "co2_pct": 51.2,
+    "cost_abs": 797.0,
+    "cement_abs": 195.9
+   }
+  },
+  "M30": {
+   "mix": {
+    "cement": 155.3,
+    "slag": 187.9,
+    "fly_ash": 40.7,
+    "water": 164.5,
+    "superplasticizer": 0.0,
+    "coarse_agg": 962.6,
+    "fine_agg": 790.3
+   },
+   "strength": {
+    "lo": 30.17,
+    "mid": 37.23,
+    "hi": 45.54,
+    "mean": 28.1
+   },
+   "co2": 165.5,
+   "co2_parts": {
+    "cement": 141.634,
+    "slag": 14.844,
+    "fly_ash": 0.326,
+    "water": 0.057,
+    "superplasticizer": 0.0,
+    "coarse_agg": 4.62,
+    "fine_agg": 4.031
+   },
+   "cost": 3974.0,
+   "cost_parts": {
+    "cement": 1242.4,
+    "slag": 751.6,
+    "fly_ash": 61.05,
+    "water": 8.22,
+    "superplasticizer": 0.0,
+    "coarse_agg": 962.6,
+    "fine_agg": 948.36
+   },
+   "stats": {
+    "binder": 383.9,
+    "total_mass": 2301.3,
+    "w_b_ratio": 0.428,
+    "scm_fraction": 0.595
+   },
+   "novelty": {
+    "distance": 1.301,
+    "ratio": 1.57,
+    "status": "supported"
+   },
+   "feasible": true,
+   "target": 30.0,
+   "age": 28,
+   "baseline": {
+    "mix": {
+     "cement": 380,
+     "slag": 0,
+     "fly_ash": 0,
+     "water": 175,
+     "superplasticizer": 2.0,
+     "coarse_agg": 1180,
+     "fine_agg": 660
+    },
+    "strength": {
+     "lo": 37.65,
+     "mid": 52.99,
+     "hi": 58.26,
+     "mean": 56.59
+    },
+    "co2": 359.4,
+    "co2_parts": {
+     "cement": 346.56,
+     "slag": 0.0,
+     "fly_ash": 0.0,
+     "water": 0.06,
+     "superplasticizer": 3.76,
+     "coarse_agg": 5.664,
+     "fine_agg": 3.366
+    },
+    "cost": 5201.0,
+    "cost_parts": {
+     "cement": 3040.0,
+     "slag": 0.0,
+     "fly_ash": 0.0,
+     "water": 8.75,
+     "superplasticizer": 180.0,
+     "coarse_agg": 1180.0,
+     "fine_agg": 792.0
+    },
+    "stats": {
+     "binder": 380,
+     "total_mass": 2397.0,
+     "w_b_ratio": 0.461,
+     "scm_fraction": 0.0
+    },
+    "novelty": {
+     "distance": 1.667,
+     "ratio": 2.02,
+     "status": "supported"
+    },
+    "age": 28
+   },
+   "savings": {
+    "co2_abs": 193.9,
+    "co2_pct": 54.0,
+    "cost_abs": 1227.0,
+    "cement_abs": 224.7
+   }
+  },
+  "M40": {
+   "mix": {
+    "cement": 237.7,
+    "slag": 196.2,
+    "fly_ash": 14.1,
+    "water": 156.6,
+    "superplasticizer": 7.6,
+    "coarse_agg": 964.3,
+    "fine_agg": 770.7
+   },
+   "strength": {
+    "lo": 40.1,
+    "mid": 53.51,
+    "hi": 58.0,
+    "mean": 47.34
+   },
+   "co2": 255.3,
+   "co2_parts": {
+    "cement": 216.782,
+    "slag": 15.5,
+    "fly_ash": 0.113,
+    "water": 0.054,
+    "superplasticizer": 14.288,
+    "coarse_agg": 4.629,
+    "fine_agg": 3.931
+   },
+   "cost": 5289.0,
+   "cost_parts": {
+    "cement": 1901.6,
+    "slag": 784.8,
+    "fly_ash": 21.15,
+    "water": 7.83,
+    "superplasticizer": 684.0,
+    "coarse_agg": 964.3,
+    "fine_agg": 924.84
+   },
+   "stats": {
+    "binder": 448.0,
+    "total_mass": 2347.2,
+    "w_b_ratio": 0.35,
+    "scm_fraction": 0.469
+   },
+   "novelty": {
+    "distance": 1.177,
+    "ratio": 1.42,
+    "status": "supported"
+   },
+   "feasible": true,
+   "target": 40.0,
+   "age": 28,
+   "baseline": {
+    "mix": {
+     "cement": 430,
+     "slag": 0,
+     "fly_ash": 0,
+     "water": 165,
+     "superplasticizer": 4.3,
+     "coarse_agg": 1170,
+     "fine_agg": 640
+    },
+    "strength": {
+     "lo": 38.64,
+     "mid": 58.57,
+     "hi": 68.29,
+     "mean": 61.48
+    },
+    "co2": 409.2,
+    "co2_parts": {
+     "cement": 392.16,
+     "slag": 0.0,
+     "fly_ash": 0.0,
+     "water": 0.057,
+     "superplasticizer": 8.084,
+     "coarse_agg": 5.616,
+     "fine_agg": 3.264
+    },
+    "cost": 5773.0,
+    "cost_parts": {
+     "cement": 3440.0,
+     "slag": 0.0,
+     "fly_ash": 0.0,
+     "water": 8.25,
+     "superplasticizer": 387.0,
+     "coarse_agg": 1170.0,
+     "fine_agg": 768.0
+    },
+    "stats": {
+     "binder": 430,
+     "total_mass": 2409.3,
+     "w_b_ratio": 0.384,
+     "scm_fraction": 0.0
+    },
+    "novelty": {
+     "distance": 1.457,
+     "ratio": 1.76,
+     "status": "supported"
+    },
+    "age": 28
+   },
+   "savings": {
+    "co2_abs": 153.9,
+    "co2_pct": 37.6,
+    "cost_abs": 484.0,
+    "cement_abs": 192.3
+   }
+  }
+ },
+ "pareto": [
+  {
+   "target": 20,
+   "co2": 150.3,
+   "strength_lo": 20.17,
+   "feasible": true,
+   "binder": 345.8,
+   "scm": 0.584
+  },
+  {
+   "target": 25,
+   "co2": 155.7,
+   "strength_lo": 25.29,
+   "feasible": true,
+   "binder": 412.3,
+   "scm": 0.65
+  },
+  {
+   "target": 30,
+   "co2": 165.5,
+   "strength_lo": 30.17,
+   "feasible": true,
+   "binder": 383.9,
+   "scm": 0.595
+  },
+  {
+   "target": 35,
+   "co2": 186.4,
+   "strength_lo": 35.03,
+   "feasible": true,
+   "binder": 436.8,
+   "scm": 0.632
+  },
+  {
+   "target": 40,
+   "co2": 255.3,
+   "strength_lo": 40.1,
+   "feasible": true,
+   "binder": 448.0,
+   "scm": 0.469
+  },
+  {
+   "target": 45,
+   "co2": 322.2,
+   "strength_lo": 45.01,
+   "feasible": true,
+   "binder": 506.6,
+   "scm": 0.385
+  },
+  {
+   "target": 50,
+   "co2": 356.1,
+   "strength_lo": 49.66,
+   "feasible": false,
+   "binder": 544.8,
+   "scm": 0.358
+  }
+ ]
+}

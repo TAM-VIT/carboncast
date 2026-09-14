@@ -1,0 +1,13 @@
+{
+  "r2": 0.9228,
+  "rmse": 4.46,
+  "coverage_raw": 0.694,
+  "coverage_calibrated": 0.874,
+  "conformal_offset_mpa": 2.97,
+  "target_coverage": 0.9,
+  "novelty_scale": 0.8262,
+  "n_train": 576,
+  "n_calib": 248,
+  "n_test": 206,
+  "n_total": 1030
+}
