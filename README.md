@@ -16,7 +16,7 @@ Run it: `./start.sh` → http://localhost:8000 · See `RUNBOOK.md` for the booth
 
 | Grade | Typical site mix | CarbonCast | Cut | Note |
 |---|---|---|---|---|
-| M20 | 289 kg CO₂e/m³ | 144 | **50.1%** | |
+| M20 | 301 kg CO₂e/m³ | 150 | **50.1%** | |
 | M25 | 319 | 156 | **51.2%** | |
 | M30 | 359 | 166 | **54.0%** | ₹1,227/m³ cheaper |
 | M40 | 409 | 255 | **37.6%** | baseline P05 is only 38.6 MPa — it misses its own grade |

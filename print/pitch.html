@@ -1,0 +1,210 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@page{size:A4 portrait;margin:15mm 16mm}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Mono:wght@400;700&display=swap');
+:root{--paper:#e9eaed;--paper-3:#cdd0d5;--ink:#191b1f;--ink-soft:#474c54;--ink-faint:#848a93;
+ --rule:#c5c9cf;--blue:#2540d9;--green:#15795c;--stamp:#c0392b;
+ --steel:linear-gradient(180deg,#f5f6f8 0%,#eaecef 46%,#e1e4e8 100%);}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Fraunces',Georgia,serif;line-height:1.5}
+.mono{font-family:'Space Mono',monospace}
+.kick{font-family:'Space Mono',monospace;font-size:8.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint)}
+.card{border:1.5px solid var(--ink);background:var(--steel);box-shadow:5px 5px 0 var(--paper-3),inset 0 1px 0 rgba(255,255,255,.9);padding:12px 14px}
+h1,h2,h3{font-weight:600;letter-spacing:-.02em;margin:0}
+em{font-style:italic;color:var(--blue)}
+
+body{font-size:10.5pt;max-width:none}
+h1{font-size:21pt;margin:0 0 4px;border-bottom:2px solid var(--ink);padding-bottom:7px}
+h2{font-size:14pt;margin:20px 0 7px;padding-top:9px;border-top:1.5px solid var(--ink);
+   page-break-after:avoid;break-after:avoid}
+h3{font-size:11.5pt;margin:13px 0 4px;page-break-after:avoid}
+p,li{font-size:10pt;line-height:1.58}
+blockquote{margin:10px 0;padding:11px 15px;border-left:3px solid var(--blue);
+ background:var(--steel);font-size:10.5pt}
+blockquote p{margin:0 0 6px} blockquote p:last-child{margin:0}
+code{font-family:'Space Mono',monospace;font-size:9pt;background:#dfe2e6;padding:1px 4px}
+strong{font-weight:700}
+table{width:100%;border-collapse:collapse;font-family:'Space Mono',monospace;font-size:9pt;margin:10px 0}
+th{text-align:left;font-size:7.5pt;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-faint);
+ font-weight:400;padding:5px 6px;border-bottom:1px solid var(--rule)}
+td{padding:5px 6px;border-bottom:1px solid var(--rule)}
+hr{border:0;border-top:1.5px solid var(--rule);margin:18px 0}
+ul,ol{padding-left:19px}
+li{margin-bottom:3px}
+</style></head><body><h1>CarbonCast: the pitch</h1>
+<p><strong>For anyone staffing the booth. You do not need to know anything about concrete or
+machine learning to use this. Read the first two sections and you can run the demo.</strong></p>
+<hr />
+<h2>1. The thing you need to understand first</h2>
+<p>Concrete is the most used material on earth after water. It is made of sand, gravel,
+water, and <strong>cement</strong>. Cement is the grey powder that glues it all together.</p>
+<p>Cement is also an environmental disaster. Making one kilogram of cement releases close to
+one kilogram of CO2. Cement alone is about <strong>8% of all human carbon emissions</strong>. If cement
+were a country, it would be the third largest emitter on the planet, behind only China and
+the USA.</p>
+<p>Here is the part most people do not know. About half those emissions do not come from
+burning fuel. They come from the chemical reaction itself. You heat limestone, it breaks
+down, and CO2 comes out. That means <strong>you cannot fix cement with solar panels or wind
+power</strong>. The carbon is baked into the chemistry.</p>
+<p>So we need to use less cement. And there is an obvious way to do it.</p>
+<p>Two industrial waste products, <strong>fly ash</strong> (left over from coal power plants) and <strong>GGBS
+slag</strong> (left over from steel furnaces), can replace a large share of the cement in
+concrete. They are waste. Nobody burned anything extra to make them. Their carbon cost is
+almost zero.</p>
+<p><strong>So why doesn't every construction site already do this?</strong></p>
+<p>Because getting it wrong means a building falls down. Concrete must hit a strength target,
+measured in MPa, and predicting the strength of a mix before you pour it is genuinely
+hard. There are seven ingredients and they interact in complicated ways. So engineers play
+it safe and add extra cement as insurance.</p>
+<p>That insurance is invisible, it is enormous, and it is poured into every structure in the
+country.</p>
+<p><strong>CarbonCast finds the insurance and gives it back.</strong></p>
+<hr />
+<h2>2. The 30-second version</h2>
+<blockquote>
+<p>"Concrete is 8% of global CO2, and cement is the reason. Half of that is the chemical
+reaction itself, so you can't fix it with renewable energy, you have to use less cement.
+Engineers already know that industrial waste can replace cement, but they over-dose
+cement anyway because predicting concrete strength is hard and being wrong means a
+building fails.</p>
+<p>We trained a model on 1,030 real lab tests to predict strength from a mix, then searched
+for the lowest-carbon mix that still hits the target. For standard M30 structural
+concrete we cut carbon by 54% at the same strength, and it comes out cheaper.</p>
+<p>On one new academic block on this campus, that's 977 tonnes of CO2."</p>
+</blockquote>
+<p>That is the whole pitch. If you say nothing else, say that.</p>
+<hr />
+<h2>3. The 90-second demo, step by step</h2>
+<p><strong>Step 1. Point at the headline.</strong>
+"Concrete is 8% of global CO2. Most of the cement in it is insurance."
+Let them read it. Do not talk over it.</p>
+<p><strong>Step 2. Hand them the sliders. This is the important bit.</strong>
+"These are the seven ingredients in concrete. Try to design a mix that hits 30 MPa."</p>
+<p>Then <strong>stop talking and let them do it.</strong> Almost everyone reaches for the cement slider,
+because more cement means more strength and that is the intuition. Watch the carbon number
+climb as they drag it.</p>
+<p>That moment, where they personally cause the carbon to go up, is the demo. Do not narrate
+over it. Do not rush them.</p>
+<p><strong>Step 3. Hit "Optimise M30".</strong>
+"Same 30 MPa target. Our mix. 54% less carbon, and about 1,200 rupees cheaper per cubic
+metre."</p>
+<p>Point at the two panels side by side. Red bar is the conventional mix. Green bar is ours.
+Point at the "What changed" table: 225 kg less cement per cubic metre, replaced with slag
+and fly ash.</p>
+<p><strong>Step 4. Answer the safety question before they ask it.</strong>
+This is the single most important sentence in the whole pitch:</p>
+<blockquote>
+<p>"You're about to ask what happens if the model is wrong. So we don't design against the
+model's average guess. We design against the bottom of its confidence range, the 5th
+percentile. The safety margin is engineered in, not hoped for."</p>
+</blockquote>
+<p>Say this <strong>before</strong> they raise it. It changes how the rest of the conversation goes,
+because it shows you already thought about the thing they were about to challenge you on.</p>
+<p><strong>Step 5. Scale it to something they can feel.</strong>
+Scroll to the campus section.
+"One new academic block on this campus. 977 tonnes of CO2. That's 444 Chennai to London
+return flights."</p>
+<p>Numbers in MPa mean nothing to most people. Flights do.</p>
+<hr />
+<h2>4. Questions you will get</h2>
+<p><strong>"How accurate is the model?"</strong>
+R-squared of 0.92 on 206 mixes it had never seen, about 4.5 MPa of error. But accuracy
+alone is not the point. The point is that we know <strong>how uncertain</strong> it is, and we design
+to the pessimistic end of that.</p>
+<p><strong>"What if the model is wrong and the building fails?"</strong>
+We never use the average prediction. We use the calibrated 5th percentile, so 95% of the
+time reality is better than what we designed for. And when we first built this, the
+uncertainty was overconfident. The model claimed a 90% confidence range that actually
+only contained 69% of real results. We fixed it with a technique called conformal
+prediction, which widened the range by about 3 MPa and brought it to 87%, with a
+mathematical guarantee that does not depend on the data being nicely behaved.</p>
+<p><em>(If they look impressed by that answer, they are probably a good judge. Keep going.)</em></p>
+<p><strong>"Couldn't the optimiser just invent a mix that doesn't work?"</strong>
+That is exactly what it did the first time we ran it. It found mixes with almost no cement
+that the model claimed were fine, because it had wandered into territory no lab has ever
+tested. So we added a guard: every mix is checked against how close it is to the 1,030
+real mixes, and the optimiser is penalised for straying. The screen tells you whether a
+mix is "supported" or "extrapolating". It reports on itself.</p>
+<p><strong>"Is this Indian data?"</strong>
+No. It is the UCI concrete dataset, which is Taiwanese. We say that on the site rather
+than hiding it. The chemistry of cement hydration transfers, but Indian fly ash and local
+aggregates genuinely differ, so validating against VIT's own materials lab is the honest
+next step. <strong>Say this before they catch it.</strong> Naming your own limitation is the strongest
+move available to you.</p>
+<p><strong>"Is strength the only thing that matters in concrete?"</strong>
+No, and we do not claim otherwise. Durability matters too: chloride ingress, carbonation,
+freeze-thaw. We do not model any of that. This is a mix design aid, not a specification.</p>
+<p><strong>"Why does M40 only save 38% when M30 saves 54%?"</strong>
+Higher strength needs more real cement, so there is less waste to cut. But notice the
+optimiser worked that out by itself. For M40 it lowered the waste replacement to 47%,
+dropped the water ratio, and added superplasticiser, which is exactly what a professional
+mix designer does for high strength concrete. Nobody programmed that in. It learned it
+from the data.</p>
+<p><strong>The best question anyone can ask: "your conventional M40 doesn't even hit 40 MPa."</strong>
+Correct, and it is our favourite result. The typical site M40 mix has a 5th percentile
+strength of 38.6 MPa, so it does not reliably make its own grade. Ours clears 40.1 with
+38% less carbon. The conventional mix is over-carbonised <strong>and</strong> under-performing at the
+same time.</p>
+<hr />
+<h2>5. If you get asked something you don't know</h2>
+<p>Say: <strong>"I don't know, that's a good question."</strong> Then either bring over a teammate, or
+say "here's how we'd find out."</p>
+<p>Do not guess. Do not bluff. A judge who catches you making something up will discount
+everything else you said, including the parts that were true. Admitting a gap costs you
+almost nothing. Getting caught costs you the whole booth.</p>
+<hr />
+<h2>6. Things not to say</h2>
+<ul>
+<li><strong>Do not say it is "AI".</strong> Say what it actually is: a model trained on 1,030 lab tests
+  plus a constrained search. "AI" makes a technical judge suspicious.</li>
+<li><strong>Do not claim it is ready for construction.</strong> It is a design aid that needs lab
+  validation. Overclaiming is the fastest way to lose a civil engineer.</li>
+<li><strong>Do not say "we used machine learning to solve climate change."</strong> Say the specific
+  thing: 54% less carbon in one concrete mix, validated on held-out data, with stated limits.</li>
+<li><strong>Do not read the screen aloud.</strong> They can read. Add the thing that is not written down.</li>
+</ul>
+<hr />
+<h2>7. The numbers, memorised</h2>
+<table>
+<thead>
+<tr>
+<th>Thing</th>
+<th>Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cement's share of global CO2</td>
+<td>~8%</td>
+</tr>
+<tr>
+<td>Lab mixes trained on</td>
+<td>1,030</td>
+</tr>
+<tr>
+<td>Model accuracy</td>
+<td>R² 0.92, ±4.5 MPa</td>
+</tr>
+<tr>
+<td>M30 carbon cut</td>
+<td><strong>54%</strong></td>
+</tr>
+<tr>
+<td>M30 cost saving</td>
+<td>₹1,227 per m³</td>
+</tr>
+<tr>
+<td>Cement removed (M30)</td>
+<td>225 kg per m³</td>
+</tr>
+<tr>
+<td>One VIT academic block</td>
+<td><strong>977 tonnes CO2</strong></td>
+</tr>
+<tr>
+<td>That equals</td>
+<td>444 Chennai-London return flights</td>
+</tr>
+</tbody>
+</table>
+<p>If you remember only two: <strong>54%</strong> and <strong>977 tonnes</strong>.</p></body></html>
